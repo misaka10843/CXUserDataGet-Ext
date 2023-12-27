@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Chaoxing Login",
+  "version": "1.0",
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "scripting",
+    "cookies",
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://passport2.chaoxing.com/*",
+        "http://passport2.chaoxing.com/*",
+        "https://api.fwgxt.top/*",
+        "http://api.fwgxt.top/*"
+      ],
+      "js": [
+        "content.js",
+        "crypto-js.min.js",
+        "localstorage.js",
+        "login.js",
+        "domchange.js"
+      ]
+    }
+  ]
+}
